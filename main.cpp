@@ -7,7 +7,7 @@ const unsigned char key = 69;
 
 void encrypt(std::vector<unsigned char>& data) {
 	for (auto& c : data) {
-		c = c ^ key;
+		c ^= key;
 	}
 }
 
