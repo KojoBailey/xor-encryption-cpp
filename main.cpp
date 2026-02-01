@@ -5,13 +5,15 @@
 
 const unsigned char key = 69;
 
-void encrypt(std::vector<unsigned char>& data) {
+void encrypt(std::vector<unsigned char>& data)
+{
 	for (auto& c : data) {
 		c ^= key;
 	}
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[])
+{
 	if (argc < 3) {
 		std::cerr << "Insufficient arguments provided.\nUse the format:\nmain <encrypt/decrypt> <file>\n";
 		return 1;
